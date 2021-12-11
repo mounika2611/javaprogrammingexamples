@@ -39,10 +39,10 @@ public class RecipientRegister extends HttpServlet {
 		 out.println("<center>");
 		 if(result){
 			 out.println("<h1>Thanks for Registering with us :</h1>");
-			 out.println("To login with UserId and Password<a href=login.jsp>Click here</a>");
+			 out.println("To login with UserId and Password<a href=Main.jsp>Click here</a>");
 		 }else{
 			 out.println("<h1>Registration Failed</h1>");
-			 out.println("To try again<a href=register.jsp>Click here</a>");
+			 out.println("To try again<a href=Recipient.jsp>Click here</a>");
 		 }
 		 out.println("</center>");
 		 out.println("</body>");
