@@ -3,7 +3,7 @@
     <html>
 <head>
   <title>Welcome to the Donar Registration page</title>
-<form action="DonorRegister" method="POST">
+<form action="DonorRegisterServlet" method="POST">
 </head>
 <style>
 *{

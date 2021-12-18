@@ -18,6 +18,10 @@ public class Recipient implements Serializable{
     private String Gender;
     private String Address;
     private Long  MobileNumber;
+    private String Bloodgroup;
+	
+
+
 	private String Email;
     private String RecipientUserId;
     private String RecipientPassword;
@@ -59,6 +63,12 @@ public class Recipient implements Serializable{
 	public void setMobileNumber(Long mobileNumber) {
 		MobileNumber = mobileNumber;
 	}
+	public String getBloodgroup() {
+		return Bloodgroup;
+	}
+	public void setBloodgroup(String bloodgroup) {
+		Bloodgroup = bloodgroup;
+	}
 	public String getEmail() {
 		return Email;
 	}
@@ -84,12 +94,13 @@ public class Recipient implements Serializable{
     }
 	
 	
-    public Recipient(String RecipientName, Long Age, String Gender,String Address,Long MobileNumber,String Email,String RecipientUserId, String RecipientPassword) {
+    public Recipient(String RecipientName, Long Age, String Gender,String Address,Long MobileNumber,String Bloodgroup,String Email,String RecipientUserId, String RecipientPassword) {
     	this.RecipientName=RecipientName;
     	this.Age=Age;
     	this.Gender=Gender;
     	this.Address=Address;
     	this.MobileNumber=MobileNumber;
+    	this.Bloodgroup=Bloodgroup;
     	this.Email=Email;
     	this.RecipientUserId=RecipientUserId;
     	this.RecipientPassword=RecipientPassword;

@@ -1,4 +1,7 @@
-<!DOCTYPE html>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+    
+   <!DOCTYPE html>
 <html>
                     <title>Welcome to Connect Blood</title>
                     <head>
@@ -13,7 +16,7 @@
                                         div.absolute {
                                                             position: absolute;
                                                             top: 100px;
-                                                            left:420px;
+                                                            left:280px;
                                                             font-size:50px;
                                                             font-family: cursive;
                                         }
@@ -29,7 +32,7 @@
 
                                           position: absolute;
                                           top:270px;
-                                          left:350px;
+                                          left:100px;
 
                                           /Replace default styling arrow/
                                           appearance:none;
@@ -57,7 +60,7 @@
 
                                           position: absolute;
                                           top:270px;
-                                          right:780px;
+                                          right:650px;
 
                                          / Replace default styling arrow/
                                           appearance:none;
@@ -74,9 +77,9 @@
                                         }
                                         p{
                                               font-style: italic;
-                                              font-size: 40px;
+                                              font-size: 30px;
                                               word-spacing: 20px;
-                                              line-height: 60px;
+                                              line-height: 40px;
 
                                         }
                                         </style>
@@ -86,8 +89,9 @@
                            <select name="Recipient" id="Recipient">
                                  
                                  <option value="nothing" selected disabled hidden>Recipient</option>
-                                 <option value="#"><a href="Recipient.html"></a>Recipient Registration</option>
-                                 <option value="#">Check status</option>
+                                 <option value="Recipient.jsp"><a href="Recipient.jsp"></a>Recipient Registration</option>
+                                 <option value="Recipientlogin.jsp"><a href="Recipientlogin.jsp"></a>Recipient Login</option>
+                                 
 
                            </select>     
                            
@@ -104,20 +108,25 @@
                            </script>
                            <select name="Donor" id="Donor">
                               <option value="nothing" selected disabled hidden>Donor</option>
-                              <option value="#"><a href="Donor.html"></a>Donar Registration</option> 
-                              <option value="#">Check status</option>
+                              <option value="Donor.jsp"><a href="Donor.jsp"></a>Donor Registration</option>
+                              <option value="Donorlogin.jsp"><a href="Donorlogin.jsp"></a>Donor Login</option> 
+                             
                         </select>
                            <script>
-                                 var urlMenu = document.getElementById('Donar');
+                                 var urlMenu = document.getElementById('Donor');
                                  urlMenu.onchange = function(){
                                        var userOption = this.options(this.selectedIndex);
                                        if(userOption.value != "nothing"){
-                                             window.open(userOption.value,"Donar page","");
+                                             window.open(userOption.value,"Donor page","");
                                        }
                                  }
                            </script>
-                           <img src = "Images/logo.png" alt = "Connect Blood" style="top:70;left:50;width:270px;height:70px">
+                           <img src = "Images/logo.png" alt = "Connect Blood" style="top:70;left:50;width:240px;height:60px">
 
                            <p style="position: absolute; right:70px;bottom:0px;">Remember that the <span style="color:red">Happiest people</span><br> are not those getting more,<br> but those <span style="color:red">giving more</span></p>
                     </body>
-</html>
+</html> 
+    
+    
+    
+ 

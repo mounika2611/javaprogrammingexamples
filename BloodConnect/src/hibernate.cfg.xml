@@ -12,4 +12,5 @@
         <mapping class="com.bloodconnect.model.Donor" /> 
         <mapping class="com.bloodconnect.model.Recipient" />
     </session-factory>
+    
 </hibernate-configuration>

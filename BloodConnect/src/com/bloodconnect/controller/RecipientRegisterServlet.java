@@ -23,10 +23,11 @@ public class RecipientRegisterServlet extends HttpServlet {
      String Gender=request.getParameter("Gender");
      String Address=request.getParameter("Address");
      Long  MobileNumber=request.getContentLengthLong();
+     String Bloodgroup=request.getParameter("Bloodgroup");
 	 String Email=request.getParameter("Email");
      String RecipientUserId=request.getParameter("RecipientUserId");
      String RecipientPassword=request.getParameter("RecipientPassword");
-	 Recipient recipient = new Recipient(RecipientName,Age,Gender,Address,MobileNumber,Email,RecipientUserId,RecipientPassword);
+	 Recipient recipient = new Recipient(RecipientName,Age,Gender,Address,MobileNumber,Bloodgroup,Email,RecipientUserId,RecipientPassword);
 			
 	 try {	
 		 RecipientRegisterService registerServiced = new RecipientRegisterService();

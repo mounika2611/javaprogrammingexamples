@@ -1,7 +1,9 @@
-<html>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+    <html>
 <head>
-  <title>Welcome to the Donor Registration page</title>
-
+  <title>Welcome to the Donar Registration page</title>
+<form action="DonorRegister" method="POST">
 </head>
 <style>
 *{
@@ -23,12 +25,12 @@
 .form{
                     border: 5px outset red;
                     background-color:lightblue;
-                    width:400;
+                    width:400px;
                     height:400px;
                     display: block;
                     position:absolute;
-                    left:580px;
-                    top: 200px;
+                    left:450px;
+                    top: 150px;
 }
 .innertext{
                     display: block;
@@ -52,22 +54,9 @@
                     font-size: 15px;
                     word-spacing: 10px;
                     line-height: 30px;
+}
 
-}
-input[type="radio"]{
-                    position:absolute;
-                    left: 110px;
-                    cursor:pointer;
-                    
-}
-label[for="male"],label[for="female"],label[for="others"]{
-                    margin-bottom: 10px;
-                    display:inline-block;
-                    padding-left: 130px;
-                    background-position:0 -32px ;
-                    line-height: 24px;
-                    cursor:pointer;
-}
+
 #area{
                     position:absolute;
                     left:110px;
@@ -79,26 +68,26 @@ label[for="male"],label[for="female"],label[for="others"]{
                     
                     <div class="header">
                                         
-                                        <h1>Donor Registration</h1>  
+                                        <h1>Donar Registration</h1>  
                     </div>
                     
-   <img src="Images/donor.png" alt="donar image" height="400" width="400" style="position:absolute;left:20px;bottom: 220px;"> 
+   <img src="Images/donor.png" alt="Donar image" height="350" width="350" style="position:absolute;left:20px;bottom: 140px;"> 
    <img src = "Images/logo.png" alt = "Connect Blood" style="position:absolute;bottom:20px;left:0px;width:270px;height:70px">
 <div class="form">
                     <div class="innertext">
-<label for="name">Donor Name: </label>
+<label for="name">Donar Name: </label>
   <input type="text" id="textarea" name="name"><br><br>
   <label for="name">Address: </label>
   <input type="text" id="textarea" name="name"><br><br>
   <label for="age">Age:</label>
   <input type="text" id="textarea" name="age"><br><br>
-  <label for="gender">Gender:</label><br>
+  <label for="gender">Gender:</label>
   <input type="radio" id="male"  name="gender">
-<label for="male">Male</label><br>
+<label for="male">Male</label>
 <input type="radio"  id="female" name="gender">
-<label for="female">Female</label><br>
+<label for="female">Female</label>
 <input type="radio"  id="others" name="gender">
-<label for="others">Others</label><br>
+<label for="others">Others</label><br><br>
  
   <label for="Mobile">Mobile Number: </label>
   <input type="text" id="textarea" name="Mobile"><br><br>
@@ -113,28 +102,35 @@ label[for="male"],label[for="female"],label[for="others"]{
       <option value="AB">Group AB-</option>
       <option value="O">Group O-</option>
   </select><br><br>
-  
+   <label for="name">DonorUserId: </label>
+  <input type="text" id="textarea" name="name"><br><br>
+   <label for="name">Donor Password: </label>
+  <input type="text" id="textarea" name="name"><br><br>
 
-  <center><input type="reset" value="Reset">          <input type="submit" id="submit" value="Submit"></center>
-                    </div>
+  <center>
+        
+   <input type="submit" id="submit" value="Submit">
+    <input type="reset" value="Reset">  
+   </center>
+  </div>
                     
 </div>
 <div>
-                    <p class ="requirements"><b>Basic requirements for donors:</b><br><br>
+                    <p class ="requirements"><b>Basic requirements for donars:</b><br><br>
 
-                                        â€¢	The donor must be fit and healthy, and should not be suffering from transmittable diseases.<br><br>
+                                       <b>*</b>	The donar must be fit and healthy, and should not be suffering from transmittable diseases.<br><br>
                                         
-                                        â€¢	<b>Age and weight</b>- Between 18â€“65 years old and should weigh a minimum of 50 kg.<br><br>
+                                        <b>*</b>	<b>Age and weight</b>- Between 18â€“65 years old and should weigh a minimum of 50 kg.<br><br>
                                         
-                                        â€¢ <b>Pulse rate</b>- Between 50 and 100 without irregularities.<br><br>
+                                        <b>*</b> <b>Pulse rate</b>- Between 50 and 100 without irregularities.<br><br>
                                         
-                                        â€¢	<b>Haemoglobin level</b>- A minimum of 12.5 g/dL.<br><br>
+                                        <b>*</b>	<b>Haemoglobin level</b>- A minimum of 12.5 g/dL.<br><br>
                                         
-                                        â€¢	<b>Blood pressure</b>- Diastolic: 50â€“100 mm Hg, Systolic: 100â€“180 mm Hg.<br><br>
+                                       <b>*</b>	<b>Blood pressure</b>- Diastolic: 50â€“100 mm Hg, Systolic: 100â€“180 mm Hg.<br><br>
                                         
-                                        â€¢	<b>Body temperature</b>- Should be normal, with an oral temperature not exceeding 37.5 Â°C.<br><br>
+                                        <b>*</b>	<b>Body temperature</b>- Should be normal, with an oral temperature not exceeding 37.5 Â°C.<br><br>
                                         
-                                        â€¢	The time period between successive blood donations should be more than 3 months.</p><br><br>
+                                        <b>*</b>	The time period between successive blood donations should be more than 3 months.</p><br><br>
 </div>
 
 </body>
