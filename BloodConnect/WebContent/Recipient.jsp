@@ -3,6 +3,7 @@
     <html>
 <head>
                     <title>Welcome to the Recipient Registration page</title>
+                    <form action="RecipientRegisterServlet" method="POST">
 
 </head>
 <style>

@@ -14,11 +14,11 @@ import com.bloodconnect.service.RecipientLoginService;
 public class RecipientLoginServlet extends HttpServlet {
 	public void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-		String userId = request.getParameter("RecipientUserId");	
-		 String password = request.getParameter("RecipientPassword");
+		String RecipientUserId = request.getParameter("RecipientUserId");	
+		 String RecipientPassword = request.getParameter("RecipientPassword");
 		 RecipientLoginService loginServicer = new RecipientLoginService();
-		boolean result = loginServicer.authenticateUser(userId, password);
-		Recipient recipient = loginServicer.getUserByUserId(userId);
+		boolean result = loginServicer.authenticateUser(RecipientUserId, RecipientPassword);
+		Recipient recipient = loginServicer.getUserByUserId(RecipientUserId);
 		 if(result == true){
 			 request.getSession().setAttribute("recipient", recipient);		
 			 response.sendRedirect("Result_page.jsp");
