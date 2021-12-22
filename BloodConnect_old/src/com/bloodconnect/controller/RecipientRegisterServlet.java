@@ -4,6 +4,7 @@ package com.bloodconnect.controller;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -12,7 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 import com.bloodconnect.model.Recipient;
 import com.bloodconnect.service.RecipientRegisterService;
 
-
+@WebServlet("/RecipientRegisterServlet")
 public class RecipientRegisterServlet extends HttpServlet {
 	public void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -23,10 +24,11 @@ public class RecipientRegisterServlet extends HttpServlet {
      String Gender=request.getParameter("Gender");
      String Address=request.getParameter("Address");
      Long  MobileNumber=request.getContentLengthLong();
+     String Bloodgroup=request.getParameter("Bloodgroup");
 	 String Email=request.getParameter("Email");
      String RecipientUserId=request.getParameter("RecipientUserId");
      String RecipientPassword=request.getParameter("RecipientPassword");
-	 Recipient recipient = new Recipient(RecipientName,Age,Gender,Address,MobileNumber,Email,RecipientUserId,RecipientPassword);
+	 Recipient recipient = new Recipient(RecipientName,Age,Gender,Address,MobileNumber,Bloodgroup,Email,RecipientUserId,RecipientPassword);
 			
 	 try {	
 		 RecipientRegisterService registerServiced = new RecipientRegisterService();

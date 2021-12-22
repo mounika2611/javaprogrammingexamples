@@ -41,7 +41,7 @@ public class DonorRegisterService {
 		try {
 			tx = session.getTransaction();
 			tx.begin();
-			Query query = session.createQuery("from User where userId='" + donor.getDonorUserId() + "'");
+			Query query = session.createQuery("from Donor where userId='" + donor.getDonorUserId() + "'");
 			Donor d = (Donor) query.uniqueResult();
 
 			tx.commit();

@@ -11,7 +11,7 @@
 
 
 <body style="background-image:url('Images/blue_background.jpg')">
-<form method="post" action="DonarLogin">
+<form method="post" action="RecipientloginServlet">
 <div style="padding: 100px 0 0 250px;">
 
 

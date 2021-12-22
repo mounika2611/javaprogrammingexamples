@@ -9,8 +9,8 @@
 </head>
 <body style="background-image:url('Images/blue_background.jpg')">
 	 <%		
-		 session.removeAttribute("DonoruserId");
-		 session.removeAttribute("Donorpassword");
+		 session.removeAttribute("DonorUserId");
+		 session.removeAttribute("DonorPassword");
 		 session.invalidate();
 	 %>
 	 

@@ -9,14 +9,14 @@ import org.hibernate.Transaction;
 import com.bloodconnect.Hibernate.util.HibernateUtil;
 import com.bloodconnect.model.Recipient;
 
-//import com.javawebtutor.hibernate.util.HibernateUtil;
+
 
 
 public class RecipientLoginService {
 
     public boolean authenticateUser(String RecipientUserId, String RecipientPassword) {
         Recipient recipient = getUserByUserId(RecipientUserId);        
-        if(recipient!=null && recipient.getRecipientUserId().equals(RecipientUserId) && recipient.getPassword().equals(RecipientPassword)){
+        if(recipient!=null && recipient.getRecipientUserId().equals(RecipientUserId) && recipient.getRecipientPassword().equals(RecipientPassword)){
             return true;
         }else{ 
             return false;
@@ -30,7 +30,7 @@ public class RecipientLoginService {
         try {
             tx = session.getTransaction();
             tx.begin();
-            Query query = session.createQuery("from Recipient where userId='"+RecipientUserId+"'");
+            Query query = session.createQuery("from Recipient where RecipientUserId='"+RecipientUserId+"'");
             user = (Recipient)query.uniqueResult();
             tx.commit();
         } catch (Exception e) {

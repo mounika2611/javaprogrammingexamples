@@ -12,11 +12,11 @@ import com.bloodconnect.service.DonorLoginService;
 public class DonorLoginServlet extends HttpServlet {
 	public void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-		String userId = request.getParameter("DonorUserId");	
-		 String password = request.getParameter("DonorPassword");
+		String DonorUserId = request.getParameter("DonorUserId");	
+		 String DonorPassword = request.getParameter("DonorPassword");
 		 DonorLoginService loginServiced = new DonorLoginService();
-		boolean result = loginServiced.authenticateUser(userId, password);
-		Donor donor = loginServiced.getUserByUserId(userId);
+		boolean result = loginServiced.authenticateUser(DonorUserId, DonorPassword);
+		Donor donor = loginServiced.getUserByUserId(DonorUserId);
 		 if(result == true){
 			 request.getSession().setAttribute("donor", donor);		
 			 response.sendRedirect("Result_page.jsp");

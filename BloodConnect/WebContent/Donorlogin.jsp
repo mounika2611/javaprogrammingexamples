@@ -11,7 +11,7 @@
 
 
 <body style="background-image:url('Images/blue_background.jpg')">
-<form method="post" action="DonorLogin">
+<form method="post" action="DonorResult.jsp">
 <div style="padding: 100px 0 0 250px;">
 
 
@@ -21,12 +21,12 @@
 Please provide your credential to use this website
 <br />
 <br />
-<div id="login-box-name" style="margin-top:20px;">DonarUserId:</div>
+<div id="login-box-name" style="margin-top:20px;">DonorUserId:</div>
 <div id="login-box-field" style="margin-top:20px;">
 <input name="DonoruserId" class="form-login" title="DonorName" value="" size="30" maxlength="50" />
 
 </div><br></br>
-<div id="login-box-name">DonarPassword:</div><br>
+<div id="login-box-name">DonorPassword:</div><br>
 <div id="login-box-field">
 <input name="Donorpassword" type="Donorpassword" class="form-login" title="Donorpassword" value="" size="30" maxlength="48" />
 </div>

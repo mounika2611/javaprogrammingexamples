@@ -19,7 +19,7 @@ public class DonorLoginServlet extends HttpServlet {
 		Donor donor = loginServiced.getUserByUserId(DonorUserId);
 		 if(result == true){
 			 request.getSession().setAttribute("donor", donor);		
-			 response.sendRedirect("Result_page.jsp");
+			 response.sendRedirect("DonorResult.jsp");
 		 }
 		 else{
 			 response.sendRedirect("error.jsp");

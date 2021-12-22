@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 import com.bloodconnect.model.Recipient;
 import com.bloodconnect.service.RecipientLoginService;
 
+
 public class RecipientLoginServlet extends HttpServlet {
 	public void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -21,7 +22,7 @@ public class RecipientLoginServlet extends HttpServlet {
 		Recipient recipient = loginServicer.getUserByUserId(RecipientUserId);
 		 if(result == true){
 			 request.getSession().setAttribute("recipient", recipient);		
-			 response.sendRedirect("Result_page.jsp");
+			 response.sendRedirect("RecipientResult.jsp");
 		 }
 		 else{
 			 response.sendRedirect("error.jsp");

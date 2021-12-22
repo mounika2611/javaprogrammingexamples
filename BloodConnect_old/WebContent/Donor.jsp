@@ -2,8 +2,8 @@
     pageEncoding="ISO-8859-1"%>
     <html>
 <head>
-  <title>Welcome to the Donar Registration page</title>
-<form action="DonorRegister" method="POST">
+  <title>Welcome to the Donor Registration page</title>
+<form action="DonorRegisterServlet" method="POST">
 </head>
 <style>
 *{

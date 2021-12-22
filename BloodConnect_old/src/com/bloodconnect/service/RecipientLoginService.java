@@ -14,23 +14,23 @@ import com.bloodconnect.model.Recipient;
 
 public class RecipientLoginService {
 
-    public boolean authenticateUser(String userId, String password) {
-        Recipient recipient = getUserByUserId(userId);        
-        if(recipient!=null && recipient.getRecipientUserId().equals(userId) && recipient.getPassword().equals(password)){
+    public boolean authenticateUser(String RecipientUserId, String RecipientPassword) {
+        Recipient recipient = getUserByUserId(RecipientUserId);        
+        if(recipient!=null && recipient.getRecipientUserId().equals(RecipientUserId) && recipient.getPassword().equals(RecipientPassword)){
             return true;
         }else{ 
             return false;
         }
     }
 
-    public Recipient getUserByUserId(String userId) {
+    public Recipient getUserByUserId(String RecipientUserId) {
         Session session = HibernateUtil.openSession();
         Transaction tx = null;
         Recipient user = null;
         try {
             tx = session.getTransaction();
             tx.begin();
-            Query query = session.createQuery("from Recipient where userId='"+userId+"'");
+            Query query = session.createQuery("from Recipient where userId='"+RecipientUserId+"'");
             user = (Recipient)query.uniqueResult();
             tx.commit();
         } catch (Exception e) {

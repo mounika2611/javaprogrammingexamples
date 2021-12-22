@@ -13,24 +13,24 @@ import com.bloodconnect.model.Donor;
 
 public class DonorLoginService {
 
-    public boolean authenticateUser(String userId, String password) {
-        Donor donor = getUserByUserId(userId);        
-        if(donor!=null && donor.getDonorUserId().equals(userId) && donor.getPassword().equals(password)){
+    public boolean authenticateUser(String DonorUserId, String DonorPassword) {
+        Donor donor = getUserByUserId(DonorUserId);        
+        if(donor!=null && donor.getDonorUserId().equals(DonorUserId) && donor.getPassword().equals(DonorPassword)){
             return true;
         }else{ 
             return false;
         }
     }
 
-    public Donor getUserByUserId(String userId) {
+    public Donor getUserByUserId(String DonorUserId) {
         Session session = HibernateUtil.openSession();
         Transaction tx = null;
-        Donor user = null;
+        Donor donor = null;
         try {
             tx = session.getTransaction();
             tx.begin();
-            Query query = session.createQuery("from User where userId='"+userId+"'");
-            user = (Donor)query.uniqueResult();
+            Query query = session.createQuery("from User where DonorUserId='"+DonorUserId+"'");
+            donor = (Donor)query.uniqueResult();
             tx.commit();
         } catch (Exception e) {
             if (tx != null) {
@@ -40,7 +40,7 @@ public class DonorLoginService {
         } finally {
             session.close();
         }
-        return user;
+        return donor;
     }
     
     public List<Donor> getListOfUsers(){

@@ -15,7 +15,7 @@ public class DonorLoginService {
 
     public boolean authenticateUser(String DonorUserId, String DonorPassword) {
         Donor donor = getUserByUserId(DonorUserId);        
-        if(donor!=null && donor.getDonorUserId().equals(DonorUserId) && donor.getPassword().equals(DonorPassword)){
+        if(donor!=null && donor.getDonorUserId().equals(DonorUserId) && donor.getDonorPassword().equals(DonorPassword)){
             return true;
         }else{ 
             return false;

@@ -68,14 +68,14 @@
                     
                     <div class="header">
                                         
-                                        <h1>Donar Registration</h1>  
+                                        <h1>Donor Registration</h1>  
                     </div>
                     
    <img src="Images/donor.png" alt="Donar image" height="350" width="350" style="position:absolute;left:20px;bottom: 140px;"> 
    <img src = "Images/logo.png" alt = "Connect Blood" style="position:absolute;bottom:20px;left:0px;width:270px;height:70px">
 <div class="form">
                     <div class="innertext">
-<label for="name">Donar Name: </label>
+<label for="name">Donor Name: </label>
   <input type="text" id="textarea" name="name"><br><br>
   <label for="name">Address: </label>
   <input type="text" id="textarea" name="name"><br><br>
@@ -116,9 +116,9 @@
                     
 </div>
 <div>
-                    <p class ="requirements"><b>Basic requirements for donars:</b><br><br>
+                    <p class ="requirements"><b>Basic requirements for donors:</b><br><br>
 
-                                       <b>*</b>	The donar must be fit and healthy, and should not be suffering from transmittable diseases.<br><br>
+                                       <b>*</b>	The donor must be fit and healthy, and should not be suffering from transmittable diseases.<br><br>
                                         
                                         <b>*</b>	<b>Age and weight</b>- Between 18â€“65 years old and should weigh a minimum of 50 kg.<br><br>
                                         

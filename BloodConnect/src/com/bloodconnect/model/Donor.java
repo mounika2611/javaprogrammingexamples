@@ -71,6 +71,7 @@ public class Donor implements Serializable {
 	public void setMobileNumber(Long mobileNumber) {
 		MobileNumber = mobileNumber;
 	}
+
 	public String getBloodgroup() {
 		return Bloodgroup;
 	}
@@ -91,26 +92,26 @@ public class Donor implements Serializable {
 		return DonorUserId;
 	}
 
-	public void setDonorUserId(String duserId) {
-		DonorUserId = duserId;
+	public void setDonorUserId(String donorUserId) {
+		DonorUserId = donorUserId;
 	}
 
-	public String getPassword() {
+	public String getDonorPassword() {
 		return DonorPassword;
 	}
 
-	public void setPassword(String dpassword) {
-		DonorPassword = dpassword;
+	public void setDonorPassword(String donorPassword) {
+		DonorPassword = donorPassword;
 	}
 
 	public Donor() {
 
 	}
 
-	public Donor(String DonorName, Long Age, String Gender, String Address, Long MobileNumber,String Bloodgroup, String Email,
-			String DonorUserId, String DonorPassword) {
+	public Donor(String DonorName, Long age, String Gender, String Address, Long MobileNumber, String Bloodgroup,
+			String Email, String DonorUserId, String DonorPassword) {
 		this.DonorName = DonorName;
-		this.Age = Age;
+		this.Age = age;
 		this.Gender = Gender;
 		this.Address = Address;
 		this.MobileNumber = MobileNumber;

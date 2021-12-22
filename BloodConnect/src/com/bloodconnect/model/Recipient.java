@@ -19,9 +19,6 @@ public class Recipient implements Serializable{
     private String Address;
     private Long  MobileNumber;
     private String Bloodgroup;
-	
-
-
 	private String Email;
     private String RecipientUserId;
     private String RecipientPassword;
@@ -33,10 +30,11 @@ public class Recipient implements Serializable{
 	public void setId(Long id) {
 		this.id = id;
 	}
-	public String getDonarName() {
+	
+	public String getRecipientName() {
 		return RecipientName;
 	}
-	public void setDonarName(String recipientName) {
+	public void setRecipientName(String recipientName) {
 		RecipientName = recipientName;
 	}
 	public Long getAge() {
@@ -78,14 +76,14 @@ public class Recipient implements Serializable{
 	public String getRecipientUserId() {
 		return RecipientUserId;
 	}
-	public void setRecipientUserId(String recipientuserId) {
-		RecipientUserId = recipientuserId;
+	public void setRecipientUserId(String recipientUserId) {
+		RecipientUserId = recipientUserId;
 	}
-	public String getPassword() {
+	public String getRecipientPassword() {
 		return RecipientPassword;
 	}
-	public void setPassword(String recipientpassword) {
-		RecipientPassword = recipientpassword;
+	public void seRecipientPassword(String recipientPassword) {
+		RecipientPassword = recipientPassword;
 	}
 	
 	
@@ -108,5 +106,6 @@ public class Recipient implements Serializable{
     	
     	
     }
+
 
 }
