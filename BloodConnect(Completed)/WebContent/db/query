@@ -1,0 +1,34 @@
+===========
+create database test;
+connect test;
+
+create table Recipient 
+(
+ id int NOT NULL AUTO_INCREMENT,
+RecipientName varchar(20) NOT null,
+Age varchar(5) NOT null,
+Gender varchar(10) NOT null,
+Address varchar(50) NOT null,
+MobileNumber varchar(10) NOT null,
+BloodGroup varchar(5) NOT null,
+Email varchar(30) NOT null,
+RecipientUserId varchar(10) NOT null,
+RecipientPassword varchar(25) NOT null,
+PRIMARY KEY (id)
+);
+=============
+create table Donor 
+(
+ id int NOT NULL AUTO_INCREMENT,
+DonorName varchar(20) NOT null,
+Age numeric(5) NOT null,
+Gender varchar(10) NOT null,
+Address varchar(50) NOT null,
+MobileNumber varchar(11)  NOT null,
+BloodGroup varchar(5) NOT null,
+Email varchar(30) NOT null,
+DonorUserId varchar(20) NOT null,
+DonorPassword varchar(25) NOT null,
+PRIMARY KEY (id)
+);
+============
